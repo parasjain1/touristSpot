@@ -1,0 +1,24 @@
+<div ng-app="touristSpot" ng-controller="allCities" class="container">
+  <div class="mdl-grid site-max-width">
+    <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card" ng-repeat="city in cities">
+        <div class="mdl-card__media">
+            <img class="article-image" src="images/cities/{{city.id - 1}}/index.jpg" border="0" alt="">
+        </div>
+        <div class="mdl-card__title">
+            <h2 class="mdl-card__title-text">{{city.name}}</h2>
+        </div>
+        <div class="mdl-card__supporting-text">
+            {{city.description}}
+        </div><br>        <div class="mdl-card__actions mdl-card--border">
+          <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" ng-href="#city?id={{city.id}}">
+            Checkout
+          </a>
+        </div>
+    </div>
+
+</div></div>
+
+      <script src="https://code.getmdl.io/1.3.0/material.min.js" defer></script>
+    </div>
+  </body>
+</html>

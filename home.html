@@ -1,0 +1,118 @@
+<div class="container" ng-controller="home">
+  <div class="mdl-grid site-max-width">
+    <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp welcome-card portfolio-card">
+      <div class="mdl-card__title">
+        <h2 class="mdl-card__title-text"><b>Welcome to Tourist Spot!</b></h2>
+      </div>
+      <div class="mdl-card__supporting-text">
+        Explore popular and trending tourist destinations throughout your country.
+      </div>
+
+    </div>
+  </div>
+
+<section class="section--center mdl-grid site-max-width">
+<header class="section__play-btn mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet mdl-cell--4-col-phone mdl-color--teal-100 mdl-color-text--white  mdl-shadow--4dp">
+<img src="images/home-tourist1.jpg" style="width:100%"/>
+</header>
+<div class="mdl-card mdl-cell mdl-cell--9-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone  mdl-shadow--4dp">
+<div class="mdl-card__title">
+    <h2 class="mdl-card__title-text">TOUR PACKAGES</h2>
+</div>
+<div class="mdl-card__supporting-text">
+  Got your heart suited destination? Give us a chance to serve you more with our excellently tailored tour packages for couples, families, friends and corporate.
+</div>
+<div class="mdl-card__actions  mdl-card--border">
+  <a href="#" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent">CONTACT US</a>
+</div>
+</div>
+</section>
+
+<section ng-class="{fullScreenDiv: isFullScreen}" class="section--center mdl-grid site-max-width" style="height:400px">
+<!-- <div id="map" ></div> -->
+<ng-map id="mapContainer"  zoom="5" center="[28.704059, 77.102490]" style="width:100%;height:100%">
+
+<marker id = "marker{{city.id}}" ng-repeat="city in cities" position="[{{ city.lat }}, {{ city.lng }}]" on-click="showInfoWindow(event, city)" />
+  <!-- <info-window id = "infoWin{{city.id}}" visible-on-marker = "marker{{city.id}}">
+    <div ng-non-bindable>
+      Chicago, IL<br/>
+      LatLng: , , <br/>
+      World Coordinate: , , <br/>
+      Pixel Coordinate: , , <br/>
+      Tile Coordinate: ,  at Zoom Level
+    </div>
+  </info-window> -->
+<shape name="circle" radius="400" center="[40.74,-74.18]" radius="4000" />
+<control name="overviewMap" opened="true" />
+</ng-map>
+<div id="mapFullScreenButton" class="mdl-button mdl-button--raised mdl-js-button mdl-js-ripple-effect mdl-button--accent" ng-click="mapFullScreen()"> ENTER IMMERSION MODE </div>
+</section>
+
+
+<section class="section--center mdl-grid site-max-width" style='margin-bottom:0px;padding-bottom:0px'>
+<h3>Popular Cities</h3>
+
+</section>
+
+<section class="section--center mdl-grid site-max-width">
+
+<a class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card" ng-repeat="n in [3] | range" style='text-decoration:none' ng-href="#city?id={{ n+1 }}">
+    <div class="mdl-card__media">
+        <img class="article-image" src="images/cities/{{ n }}/index.jpg" border="0" alt="">
+    </div>
+    <div class="mdl-card__title">
+        <h2 class="mdl-card__title-text">{{ cities[n].name }}</h2>
+    </div>
+    <div class="mdl-card__supporting-text">
+        {{ cities[n].description }}
+    </div>
+</a>
+</section>
+
+
+<div class="homepage-footer">
+<section class="mdl-grid site-max-width">
+<div class="mdl-cell mdl-card mdl-cell--8-col mdl-cell--4-col-tablet  mdl-shadow--4dp portfolio-card">
+<div class="mdl-card__title">
+  <h2 class="mdl-card__title-text">Testimonials</h2>
+</div>
+<ul class="demo-list-three mdl-list">
+  <li class="mdl-list__item mdl-list__item--three-line">
+    <span class="mdl-list__item-primary-content">
+      <i class="material-icons mdl-list__item-avatar">person</i>
+      <span>Amazing app, trip suggestions are very helpful!</span>
+      <span class="mdl-list__item-text-body">
+        Paras Jain, New Delhi
+      </span>
+    </span>
+  </li>
+  <li class="mdl-list__item mdl-list__item--three-line">
+    <span class="mdl-list__item-primary-content">
+      <i class="material-icons  mdl-list__item-avatar">person</i>
+      <span>Tour packages are very reasonably priced. Awesome service!</span>
+      <span class="mdl-list__item-text-body">
+      Varun Kathuria, Mumbai
+      </span>
+    </span>
+  </li>
+</ul>
+</div>
+<div class="demo-card-event mdl-cell mdl-card mdl-shadow--4dp event-card portfolio-card">
+<div class="mdl-card__title mdl-card--expand">
+<h4>
+  Featured Offer:<br>
+  7 Days Metro Tour
+  <br>
+  July - Aug 2017
+</h4>
+</div>
+<div class="mdl-card__actions mdl-card--border">
+<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" ng-href="#/contact">
+  GET OFFER
+</a>
+<div class="mdl-layout-spacer"></div>
+<i class="material-icons">star</i>
+</div>
+</div>
+</section>
+</div></div>
