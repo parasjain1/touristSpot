@@ -14,6 +14,24 @@ var cities = [
         'image' : 'images/cities/0/0.jpg',
         'description' : "The Red Fort is a historical fort in the city of Delhi in India. It was the main residence of the emperors of the Mughal dynasty for nearly 200 years.",
         'address' : 'Netaji Subhash Marg, Lal Qila, Chandni Chowk, New Delhi, Delhi 110006 (Chandni Chowk Metro Station)'
+      },
+      {
+        'id' : 2,
+        'name' : 'India Gate',
+        'lat' : 28.612912,
+        'lng' : 77.229510,
+        'image' : 'images/cities/0/1.jpg',
+        'description' : "At the centre of New Delhi stands the 42 m high India Gate, an 'Arc-de-Triomphe' like archway in the middle of a crossroad. Almost similar to its French counterpart, it commemorates the 70,000 Indian soldiers who lost their lives fighting for the British Army during the World War I. The memorial bears the names of more than 13,516 British and Indian soldiers killed in the Northwestern Frontier in the Afghan war of 1919.",
+        'address' : 'Rajpath Marg, India Gate, New Delhi, Delhi 110001'
+      },
+      {
+        'id' : 2,
+        'name' : 'Lotus Temple',
+        'lat' : 28.553492,
+        'lng' : 77.258826,
+        'image' : 'images/cities/0/2.jpg',
+        'description' : "East of Nehru place, this temple is built in the shape of a lotus flower and is the last of seven Major Bahai's temples built around the world. Completed in1986 it is set among the lush green landscaped gardens. The structure is made up of pure white marble The architect Furiburz Sabha chose the lotus as the symbol common to Hinduism, Buddhism, Jainism and Islam. Adherents of any faith are free to visit the temple and pray or meditate.",
+        'address' : 'Lotus Temple Rd, Bahapur, Shambhu Dayal Bagh, Kalkaji, New Delhi, Delhi 110019'
       }
     ]
   },
